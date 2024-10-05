@@ -1,5 +1,11 @@
 # Gaamon
 
+# This project was not continued
+
+# Start Date: Mid 2022
+
+# End Date: End 2022
+
 ## Project setup
 
 ```
