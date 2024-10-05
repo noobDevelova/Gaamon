@@ -1,0 +1,64 @@
+// Import from google fonts
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;400;500;600;700;900&display=swap"); // Import fonts from google fonts.
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+// and add it to variables
+
+$archivo: "Archivo", sans-serif;
+$poppins: "Poppins", sans-serif;
+/* Use Mixin to generate the font weight for its weight */
+@mixin font-weight($weight) {
+  $weights: (
+    thin: 100,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+  );
+  $output: $weight;
+  @if map-has-key($weights, $weight) {
+    $output: map-get($weights, $weight);
+  }
+  font-weight: $output;
+}
+/*
+  Example:
+  instead of using: font-weight: 500;
+
+  use:
+  @include font-weight(medium);
+*/
+
+/*--------------------*/
+
+//Color variables
+$primary: #cee5d0;
+$primaryLogin: #a5b7a6;
+$kuningEternal: #f8ee22;
+$kuningSummer: #f9f03a;
+$EternalSummer30: #f7ec09;
+$primaryDisabled: #c6bd07;
+$neutral: rgba(234, 236, 240, 1);
+$neutral50: rgba(102, 112, 133, 1);
+$pinkOCD: #896dff;
+$pinkOcd300: #6b48ff;
+$primary20: #d3e8d5;
+$pinkOCD40: #6041e6;
+$pinkOCD10: #7a5aff;
+$blurGrey: #505050;
+$merahCrimson: #ec4343;
+$merahGelap: #ec4343;
+$greySolid: #d0d5dd;
+$oyenForum: #f3be00;
+$ijoSampah: #a5b7a6;
+$placeholder: #505050;
+
+// Primary button template
+.btn-master {
+  background-color: $kuningEternal;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0px #000000;
+  @include font-weight(bold);
+  font-size: 0.8rem;
+}
